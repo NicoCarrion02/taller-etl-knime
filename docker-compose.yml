@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  # 1. PostgreSQL
+  postgres_db:
+    image: postgres:15-alpine
+    container_name: f1_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin123
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+  # 2. MySQL
+  mysql_db:
+    image: mysql:8.0
+    container_name: f1_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: admin123
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  # 3. MongoDB
+  mongodb_db:
+    image: mongo:6.0
+    container_name: f1_mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  pg_data:
+  mysql_data:
+  mongo_data:
