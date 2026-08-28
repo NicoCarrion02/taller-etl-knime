@@ -1,6 +1,6 @@
 # Proyecto ETL: Data Warehouse de Fórmula 1
 
-**Maestría de Ciencia de Datos - USFQ**  
+**Maestría de Ciencia de Datos - Universidad San Francisco de Quito**  
 **Materia:** Ingeniería de Datos  
 **Autor:** Nicolás Carrión  
 
